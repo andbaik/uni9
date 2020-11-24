@@ -53,11 +53,6 @@ document.getElementById('btn_mult').addEventListener('click', function () {
     operation = 'mult';
     inputWindow.value = '';
 })
-document.getElementById('btn_def').addEventListener('click', function () {
-    lastOperand = parseInt(inputWindow.value);
-    operation = 'def';
-    inputWindow.value = '';
-})
 document.getElementById('btn_div').addEventListener('click', function () {
     lastOperand = parseInt(inputWindow.value);
     operation = 'div';
@@ -70,8 +65,6 @@ document.getElementById('btn_sqr').addEventListener('click', function () {
     lastOperand = '0';
     inputWindow.value = result;
     })
-
-
 document.getElementById('btn_calc').addEventListener('click', function () {
    if (operation === 'sum'){
        const result = lastOperand + parseInt(inputWindow.value);
@@ -97,18 +90,7 @@ if (operation === 'div'){
     lastOperand = '0';
     inputWindow.value = result;
 }
-/*if (operation === 'sqr'){
-    const result = Math.sqrt(lastOperand);
-    operation = null;
-    lastOperand = '0';
-    inputWindow.value = result;
-}
-*/
-
 })
-
-
-
 document.getElementById('btn_clr').addEventListener('click', function () {
     lastOperand = 0;
     operation = null;
